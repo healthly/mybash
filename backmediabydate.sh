@@ -6,7 +6,7 @@ cur_date=`date +%Y%m%d`
 for (( i = 133 ; i > 123; i--))
 do 
 ago_date=`date --date="${i} day ago" +%Y%m%d`
-if [ ! -d "$dir/$ago_date" ]
+if [ -d "$dir/$ago_date" ]
 then
   dirA=("${dirA[@]}" "$dir/$ago_date")
   #cp -af $dir/$ago_date $dir_bak/ >> bak_`date +%Y%m%d`.log 2>&1
